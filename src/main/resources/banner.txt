@@ -1,0 +1,13 @@
+${application.title} ${application.version}
+Powered by Spring Boot ${spring-boot.version}
+Banner output
+ _                                                       _
+( )                                                     ( )
+| |__     _     ___ ___     __   _   _   _    _    _ __ | |/')
+|  _ `\ /'_`\ /' _ ` _ `\ /'__`\( ) ( ) ( ) /'_`\ ( '__)| , <
+| | | |( (_) )| ( ) ( ) |(  ___/| \_/ \_/ |( (_) )| |   | |\`\
+(_) (_)`\___/'(_) (_) (_)`\____)`\___x___/'`\___/'(_)   (_) (_)
+
+
+${application.title} ${application.version}
+Powered by Spring Boot ${spring-boot.version}
