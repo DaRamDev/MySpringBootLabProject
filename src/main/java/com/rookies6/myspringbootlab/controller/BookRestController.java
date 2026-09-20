@@ -25,15 +25,16 @@ public class BookRestController {
     @GetMapping("/{id}")
     public ResponseEntity<Book> getBookById(@PathVariable Long id) { //경로에 있는 id를 가져옴
         Book book = bookRepository.findById(id)
-                .orElseThrow(() -> new BusinessException("Book not found with id: " 
+                .orElseThrow(() -> new BusinessException("Book not found with id: " //에러 코드 처리
                 + id, HttpStatus.NOT_FOUND));
         return ResponseEntity.ok(book);
     }
-        // 3. ISBN으로 도서 조회 (GET /api/books/isbn/{isbn})
+    // 3. ISBN으로 도서 조회 (GET /api/books/isbn/{isbn})
     @GetMapping("/isbn/{isbn}")
     public ResponseEntity<Book> getBookByIsbn(@PathVariable String isbn) {
         Book book = bookRepository.findByIsbn(isbn)
-                .orElseThrow(() -> new BusinessException("Book not found with isbn: " + isbn, HttpStatus.NOT_FOUND));
+                .orElseThrow(() -> new BusinessException("Book not found with isbn: " 
+                + isbn, HttpStatus.NOT_FOUND));
         return ResponseEntity.ok(book);
     }
     // 4. 새 도서 등록 (POST /api/books)
